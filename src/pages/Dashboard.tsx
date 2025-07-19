@@ -67,6 +67,43 @@ const Dashboard = () => {
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       
+      {/* ATO Update Banner */}
+      <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mx-4 mt-4 rounded-r-lg">
+        <div className="flex">
+          <div className="flex-shrink-0">
+            <AlertTriangle className="h-5 w-5 text-amber-400" />
+          </div>
+          <div className="ml-3">
+            <p className="text-sm font-medium text-amber-800">
+              [ATO UPDATE] New PAYG Withholding Threshold Effective August 1st
+            </p>
+            <div className="mt-2 text-sm text-amber-700">
+              <p className="mb-2">
+                The ATO has updated PAYG withholding tax tables for employees earning between $45,000–$120,000.
+              </p>
+              <div className="mb-2">
+                <p className="font-medium">Impact on You:</p>
+                <ul className="list-disc list-inside ml-4">
+                  <li>Your current employee payslips may be using outdated tax rates.</li>
+                  <li>Review your payroll configuration to avoid underpayment penalties.</li>
+                </ul>
+              </div>
+              <p className="text-xs text-amber-600">
+                🕒 Detected: 2 hours ago | Source: ATO Compliance Bulletin – 20 July 2025
+              </p>
+              <div className="mt-3 flex space-x-3">
+                <Button size="sm" variant="outline" className="border-amber-400 text-amber-800 hover:bg-amber-100">
+                  🧾 View Action Guide
+                </Button>
+                <Button size="sm" variant="outline" className="border-amber-400 text-amber-800 hover:bg-amber-100">
+                  ✔️ Mark Reviewed
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">

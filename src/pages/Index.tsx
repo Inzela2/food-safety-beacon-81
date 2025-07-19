@@ -127,7 +127,7 @@ const Index = () => {
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl">Free Trial</CardTitle>
                 <CardDescription>Try all features risk-free</CardDescription>
-                <div className="text-4xl font-bold text-green-600 mt-4">Free<span className="text-lg text-gray-600"> for 30-60 days</span></div>
+                <div className="text-4xl font-bold text-green-600 mt-4">Free<span className="text-lg text-gray-600"> for 30 days</span></div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
@@ -145,7 +145,7 @@ const Index = () => {
                 <Badge className="mb-2 bg-blue-100 text-blue-800">Most Popular</Badge>
                 <CardTitle className="text-2xl">Monthly Plan</CardTitle>
                 <CardDescription>Perfect for ongoing compliance</CardDescription>
-                <div className="text-4xl font-bold text-blue-600 mt-4">$19-29<span className="text-lg text-gray-600">/month</span></div>
+                <div className="text-4xl font-bold text-blue-600 mt-4">$19<span className="text-lg text-gray-600">/month</span></div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
@@ -163,7 +163,7 @@ const Index = () => {
                 <Badge className="mb-2 bg-purple-100 text-purple-800">Best Value</Badge>
                 <CardTitle className="text-2xl">Annual Plan</CardTitle>
                 <CardDescription>Save with yearly billing</CardDescription>
-                <div className="text-4xl font-bold text-purple-600 mt-4">$149-199<span className="text-lg text-gray-600">/year</span></div>
+                <div className="text-4xl font-bold text-purple-600 mt-4">$199<span className="text-lg text-gray-600">/year</span></div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
