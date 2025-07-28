@@ -113,9 +113,9 @@ const Dashboard = () => {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Welcome back!</h1>
-          <p className="text-gray-600 mt-2">
-            {businessData.businessName} • {businessData.businessType} • {businessData.location}
-          </p>
+           <p className="text-gray-600 mt-2">
+             Pacific Coast Bistro • restaurant • 1547 Ocean Avenue, Santa Monica CA 90401
+           </p>
         </div>
 
         {/* Stats Cards */}
@@ -338,9 +338,9 @@ const Dashboard = () => {
                   <div className="text-center">
                     <div className="text-3xl font-bold text-purple-600">307,798%</div>
                     <div className="text-sm text-gray-600">ROI This Month</div>
-                    <div className="text-xs text-gray-500 mt-1">
-                      Your investment: $16.58/month
-                    </div>
+                     <div className="text-xs text-gray-500 mt-1">
+                       Your investment: $19/month
+                     </div>
                   </div>
                 </div>
               </CardContent>
@@ -734,16 +734,172 @@ const Dashboard = () => {
                 </p>
               </div>
             </div>
+           </TabsContent>
+
+          <TabsContent value="health">
+            <div className="space-y-6">
+              {/* Food Safety & Sanitation */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    🍽️ Food Safety & Sanitation (County Level)
+                  </CardTitle>
+                  <CardDescription>
+                    Core requirements for health department compliance
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Task</TableHead>
+                        <TableHead>Frequency</TableHead>
+                        <TableHead>Status</TableHead>
+                        <TableHead>Legal Ref</TableHead>
+                        <TableHead>Proof</TableHead>
+                        <TableHead>Actions</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="font-medium">Food Handler Permits - All employees valid (renewed every 3 years)</TableCell>
+                        <TableCell>3 years</TableCell>
+                        <TableCell><Badge variant="destructive">2 Expired</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Permit certificates</TableCell>
+                        <TableCell><Button size="sm">Renew Permits</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Food Manager Certification - Certified manager on duty all hours</TableCell>
+                        <TableCell>5 years</TableCell>
+                        <TableCell><Badge variant="secondary">Expires in 60 days</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Manager certification</TableCell>
+                        <TableCell><Button size="sm">Schedule Renewal</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">HACCP Plan Documentation - Updated annually</TableCell>
+                        <TableCell>Annual</TableCell>
+                        <TableCell><Badge variant="default">Current</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>HACCP plan document</TableCell>
+                        <TableCell><Button size="sm" variant="outline">Review Plan</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Temperature Logs - Daily monitoring (refrigeration 41°F or below, hot holding 135°F or above)</TableCell>
+                        <TableCell>Daily</TableCell>
+                        <TableCell><Badge variant="destructive">Missing 3 days</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Temperature log sheets</TableCell>
+                        <TableCell><Button size="sm">Complete Logs</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Cleaning & Sanitization Schedule - Written procedures with completion logs</TableCell>
+                        <TableCell>Daily</TableCell>
+                        <TableCell><Badge variant="default">Current</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Cleaning completion logs</TableCell>
+                        <TableCell><Button size="sm" variant="outline">View Schedule</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Hand Washing Station Compliance - Soap, towels, warm water, signage</TableCell>
+                        <TableCell>Daily</TableCell>
+                        <TableCell><Badge variant="secondary">Supplies low</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Supply checklist</TableCell>
+                        <TableCell><Button size="sm">Restock Supplies</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Food Source Verification - All food from approved suppliers</TableCell>
+                        <TableCell>Each delivery</TableCell>
+                        <TableCell><Badge variant="default">Verified</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Supplier documentation</TableCell>
+                        <TableCell><Button size="sm" variant="outline">View Suppliers</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Allergen Management Plan - Written procedures for cross-contamination prevention</TableCell>
+                        <TableCell>Daily review</TableCell>
+                        <TableCell><Badge variant="secondary">Plan update needed</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Allergen procedure document</TableCell>
+                        <TableCell><Button size="sm">Update Plan</Button></TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </CardContent>
+              </Card>
+
+              {/* Permits & Renewals */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    📋 Permits & Renewals
+                  </CardTitle>
+                  <CardDescription>
+                    Health department permits and renewal requirements
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Task</TableHead>
+                        <TableHead>Frequency</TableHead>
+                        <TableHead>Status</TableHead>
+                        <TableHead>Legal Ref</TableHead>
+                        <TableHead>Proof</TableHead>
+                        <TableHead>Actions</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="font-medium">Health Permit Renewal - Annual renewal with fees ($200-$800)</TableCell>
+                        <TableCell>Annual</TableCell>
+                        <TableCell><Badge variant="secondary">Due in 45 days</Badge></TableCell>
+                        <TableCell>Santa Monica Municipal Code</TableCell>
+                        <TableCell>Health permit certificate</TableCell>
+                        <TableCell><Button size="sm">Start Renewal</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Mobile Food Unit Permits - If operating food trucks</TableCell>
+                        <TableCell>Annual</TableCell>
+                        <TableCell><Badge variant="default">Not applicable</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Mobile permit</TableCell>
+                        <TableCell><Button size="sm" variant="outline">N/A</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Temporary Event Permits - For off-site catering</TableCell>
+                        <TableCell>Per event</TableCell>
+                        <TableCell><Badge variant="secondary">Upcoming event</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Temporary event permit</TableCell>
+                        <TableCell><Button size="sm">Apply for Permit</Button></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Plan Review Approval - Required for construction/renovations</TableCell>
+                        <TableCell>As needed</TableCell>
+                        <TableCell><Badge variant="default">Current</Badge></TableCell>
+                        <TableCell>CA Health & Safety Code</TableCell>
+                        <TableCell>Plan review approval</TableCell>
+                        <TableCell><Button size="sm" variant="outline">View Approval</Button></TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </CardContent>
+              </Card>
+            </div>
           </TabsContent>
 
           <TabsContent value="tax">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  💼 Tax Obligations • BAS Cycle: Current Quarter
+                  💼 Tax Compliance (Multi-Level) • Current Quarter
                 </CardTitle>
                 <CardDescription>
-                  Australian tax compliance and filing requirements
+                  Federal, state, and local tax compliance requirements
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -753,41 +909,57 @@ const Dashboard = () => {
                       <TableHead>Task</TableHead>
                       <TableHead>Frequency</TableHead>
                       <TableHead>Status</TableHead>
-                      <TableHead>Late Penalty</TableHead>
-                      <TableHead>Auto-File</TableHead>
+                      <TableHead>Legal Ref</TableHead>
+                      <TableHead>Proof</TableHead>
                       <TableHead>Actions</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     <TableRow>
-                      <TableCell className="font-medium">BAS Lodgment</TableCell>
+                      <TableCell className="font-medium">✓ IRS Updates</TableCell>
+                      <TableCell>As needed</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>IRC</TableCell>
+                      <TableCell>Tax code update notifications</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Updates</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">✓ State Income, Franchise & Sales Tax</TableCell>
                       <TableCell>Quarterly</TableCell>
-                      <TableCell><Badge variant="destructive">Overdue</Badge></TableCell>
-                      <TableCell>$1,100/day</TableCell>
-                      <TableCell>🚀 ATO API</TableCell>
-                      <TableCell><Button size="sm">File Now</Button></TableCell>
+                      <TableCell><Badge variant="secondary">Due in 15 days</Badge></TableCell>
+                      <TableCell>CA Rev & Tax Code</TableCell>
+                      <TableCell>State tax returns</TableCell>
+                      <TableCell><Button size="sm">File Returns</Button></TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">GST Reconciliation</TableCell>
-                      <TableCell>Weekly</TableCell>
-                      <TableCell><Badge variant="secondary">Due Today</Badge></TableCell>
-                      <TableCell>2% of owed</TableCell>
-                      <TableCell>🧾 POS sync</TableCell>
-                      <TableCell><Button size="sm" variant="outline">Process</Button></TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">PAYG Withholding</TableCell>
+                      <TableCell className="font-medium">✓ Payroll Tax & Withholding</TableCell>
                       <TableCell>Monthly</TableCell>
                       <TableCell><Badge variant="default">Current</Badge></TableCell>
-                      <TableCell>$210/day</TableCell>
-                      <TableCell>👨‍💼 Payroll link</TableCell>
-                      <TableCell><Button size="sm" variant="outline">View</Button></TableCell>
+                      <TableCell>CA EDD requirements</TableCell>
+                      <TableCell>Payroll tax remittance</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Status</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">✓ Local Business & Gross Receipts Taxes</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="secondary">Due in 30 days</Badge></TableCell>
+                      <TableCell>Santa Monica Municipal Code</TableCell>
+                      <TableCell>Business tax certificate</TableCell>
+                      <TableCell><Button size="sm">Renew License</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">✓ 1099 / Info Return Filing Obligations</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="destructive">Overdue</Badge></TableCell>
+                      <TableCell>IRC Section 6041</TableCell>
+                      <TableCell>1099 forms and transmittals</TableCell>
+                      <TableCell><Button size="sm">File Forms</Button></TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
                 <div className="mt-4 p-4 bg-blue-50 rounded-lg">
                   <p className="text-sm text-blue-800">
-                    ⚠️ Outstanding: PAYG (Due TODAY) | 💰 Saved this quarter: $2,800
+                    ⚠️ Outstanding: 1099 Forms (Overdue) | 💰 Saved this quarter: $4,200
                   </p>
                 </div>
               </CardContent>
