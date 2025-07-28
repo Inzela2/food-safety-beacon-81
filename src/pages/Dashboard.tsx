@@ -27,30 +27,30 @@ const Dashboard = () => {
   const urgentTasks = [
     {
       id: 1,
-      title: "BAS Lodgment Q4 2024",
+      title: "Cal/OSHA Injury & Illness Prevention Program Annual Update",
       status: "overdue",
-      dueDate: "2024-01-28",
-      overdueDays: 512,
-      category: "Tax & Finance",
-      penalty: "$1,100 per day after due date"
+      dueDate: "2024-12-31",
+      overdueDays: 28,
+      category: "Cal/OSHA Workplace Safety",
+      penalty: "$15,873 + $1,500/day | Risk: Workplace inspection failure"
     },
     {
       id: 2,
-      title: "Halal Certification Renewal",
+      title: "Food Handler Manager Certification Renewal",
       status: "overdue",
-      dueDate: "2024-01-20",
-      overdueDays: 520,
-      category: "Meat Standards",
-      penalty: "Cannot sell halal products"
+      dueDate: "2024-12-15",
+      overdueDays: 42,
+      category: "County Health Department",
+      penalty: "$500-$5,000 + Possible closure | Risk: County health shutdown"
     },
     {
       id: 3,
-      title: "Meat Safety Standards Review",
-      status: "pending",
-      dueDate: "2024-02-05",
-      overdueDays: 504,
-      category: "Meat Standards",
-      penalty: "$5,000 fine + license suspension"
+      title: "Break Period Compliance Audit (CA Labor Law)",
+      status: "overdue",
+      dueDate: "2024-11-30",
+      overdueDays: 58,
+      category: "California Labor Board",
+      penalty: "$50-$200 per employee per day | Risk: Class action lawsuit"
     }
   ];
 
@@ -67,38 +67,43 @@ const Dashboard = () => {
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       
-      {/* ATO Update Banner */}
-      <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mx-4 mt-4 rounded-r-lg">
+      {/* Multi-Agency Alert Feed */}
+      <div className="bg-red-50 border-l-4 border-red-400 p-4 mx-4 mt-4 rounded-r-lg">
         <div className="flex">
           <div className="flex-shrink-0">
-            <AlertTriangle className="h-5 w-5 text-amber-400" />
+            <AlertTriangle className="h-5 w-5 text-red-400" />
           </div>
           <div className="ml-3">
-            <p className="text-sm font-medium text-amber-800">
-              [ATO UPDATE] New PAYG Withholding Threshold Effective August 1st
+            <p className="text-sm font-medium text-red-800 mb-3">
+              Multi-Agency Alert Feed
             </p>
-            <div className="mt-2 text-sm text-amber-700">
-              <p className="mb-2">
-                The ATO has updated PAYG withholding tax tables for employees earning between $45,000–$120,000.
-              </p>
-              <div className="mb-2">
-                <p className="font-medium">Impact on You:</p>
-                <ul className="list-disc list-inside ml-4">
-                  <li>Your current employee payslips may be using outdated tax rates.</li>
-                  <li>Review your payroll configuration to avoid underpayment penalties.</li>
-                </ul>
+            <div className="space-y-2 text-sm text-red-700">
+              <div className="p-2 bg-red-100 rounded">
+                <p className="font-medium">[CAL/OSHA ALERT] New Heat Illness Prevention Requirements - Effective Sept 1st</p>
               </div>
-              <p className="text-xs text-amber-600">
-                🕒 Detected: 2 hours ago | Source: ATO Compliance Bulletin – 20 July 2025
-              </p>
-              <div className="mt-3 flex space-x-3">
-                <Button size="sm" variant="outline" className="border-amber-400 text-amber-800 hover:bg-amber-100">
-                  🧾 View Action Guide
-                </Button>
-                <Button size="sm" variant="outline" className="border-amber-400 text-amber-800 hover:bg-amber-100">
-                  ✔️ Mark Reviewed
-                </Button>
+              <div className="p-2 bg-orange-100 rounded">
+                <p className="font-medium">[COUNTY HEALTH] Food Handler Permit Renewal Reminder - Due in 30 days</p>
               </div>
+              <div className="p-2 bg-yellow-100 rounded">
+                <p className="font-medium">[CA LABOR] Minimum Wage Increase $18.50/hour - Effective Jan 1st</p>
+              </div>
+              <div className="p-2 bg-blue-100 rounded">
+                <p className="font-medium">[LOCAL FIRE] Kitchen Suppression System Inspection Required - Schedule by Oct 15th</p>
+              </div>
+              <div className="p-2 bg-purple-100 rounded">
+                <p className="font-medium">[CA ABC] Liquor License Renewal Window Opens - Apply 60 days before expiration</p>
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Button size="sm" variant="outline" className="border-red-400 text-red-800 hover:bg-red-100">
+                Emergency Action Plan
+              </Button>
+              <Button size="sm" variant="outline" className="border-red-400 text-red-800 hover:bg-red-100">
+                Schedule Inspector Call
+              </Button>
+              <Button size="sm" variant="outline" className="border-red-400 text-red-800 hover:bg-red-100">
+                Generate Compliance Report
+              </Button>
             </div>
           </div>
         </div>
@@ -120,8 +125,8 @@ const Dashboard = () => {
               <div className="flex items-center">
                 <AlertTriangle className="h-8 w-8 text-red-500" />
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600">Overdue Tasks</p>
-                  <p className="text-2xl font-bold text-gray-900">7</p>
+                  <p className="text-sm font-medium text-gray-600">Critical (Multi-Agency Impact)</p>
+                  <p className="text-2xl font-bold text-gray-900">3</p>
                 </div>
               </div>
             </CardContent>
@@ -130,10 +135,10 @@ const Dashboard = () => {
           <Card>
             <CardContent className="p-6">
               <div className="flex items-center">
-                <Clock className="h-8 w-8 text-yellow-500" />
+                <Clock className="h-8 w-8 text-orange-500" />
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600">Pending</p>
-                  <p className="text-2xl font-bold text-gray-900">4</p>
+                  <p className="text-sm font-medium text-gray-600">High Priority (Single Agency)</p>
+                  <p className="text-2xl font-bold text-gray-900">8</p>
                 </div>
               </div>
             </CardContent>
@@ -144,8 +149,8 @@ const Dashboard = () => {
               <div className="flex items-center">
                 <Calendar className="h-8 w-8 text-blue-500" />
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600">Upcoming</p>
-                  <p className="text-2xl font-bold text-gray-900">2</p>
+                  <p className="text-sm font-medium text-gray-600">Standard Compliance</p>
+                  <p className="text-2xl font-bold text-gray-900">12</p>
                 </div>
               </div>
             </CardContent>
@@ -156,8 +161,8 @@ const Dashboard = () => {
               <div className="flex items-center">
                 <CheckCircle className="h-8 w-8 text-green-500" />
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600">Completed</p>
-                  <p className="text-2xl font-bold text-gray-900">23</p>
+                  <p className="text-sm font-medium text-gray-600">Completed This Month</p>
+                  <p className="text-2xl font-bold text-gray-900">47</p>
                 </div>
               </div>
             </CardContent>
@@ -166,34 +171,38 @@ const Dashboard = () => {
 
         {/* Compliance Tabs */}
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 lg:grid-cols-8 mb-8">
+          <TabsList className="grid w-full grid-cols-4 lg:grid-cols-9 mb-8">
             <TabsTrigger value="overview" className="flex items-center space-x-1 text-xs">
               <Shield className="h-3 w-3" />
               <span>Overview</span>
             </TabsTrigger>
-            <TabsTrigger value="haccp" className="flex items-center space-x-1 text-xs">
-              <Thermometer className="h-3 w-3" />
-              <span>HACCP</span>
-            </TabsTrigger>
-            <TabsTrigger value="workplace" className="flex items-center space-x-1 text-xs">
-              <Users className="h-3 w-3" />
-              <span>Staff</span>
-            </TabsTrigger>
-            <TabsTrigger value="safety" className="flex items-center space-x-1 text-xs">
+            <TabsTrigger value="calosha" className="flex items-center space-x-1 text-xs">
               <ShieldCheck className="h-3 w-3" />
-              <span>Safety</span>
+              <span>Cal/OSHA</span>
             </TabsTrigger>
-            <TabsTrigger value="facility" className="flex items-center space-x-1 text-xs">
+            <TabsTrigger value="health" className="flex items-center space-x-1 text-xs">
+              <Thermometer className="h-3 w-3" />
+              <span>Health Dept</span>
+            </TabsTrigger>
+            <TabsTrigger value="labor" className="flex items-center space-x-1 text-xs">
+              <Users className="h-3 w-3" />
+              <span>Labor</span>
+            </TabsTrigger>
+            <TabsTrigger value="environmental" className="flex items-center space-x-1 text-xs">
               <AlertTriangle className="h-3 w-3" />
-              <span>Facility</span>
+              <span>Environmental</span>
             </TabsTrigger>
-            <TabsTrigger value="licensing" className="flex items-center space-x-1 text-xs">
+            <TabsTrigger value="fire" className="flex items-center space-x-1 text-xs">
+              <Shield className="h-3 w-3" />
+              <span>Fire Safety</span>
+            </TabsTrigger>
+            <TabsTrigger value="abc" className="flex items-center space-x-1 text-xs">
               <CheckCircle className="h-3 w-3" />
-              <span>Licensing</span>
+              <span>ABC Licensing</span>
             </TabsTrigger>
-            <TabsTrigger value="operations" className="flex items-center space-x-1 text-xs">
+            <TabsTrigger value="business" className="flex items-center space-x-1 text-xs">
               <Clock className="h-3 w-3" />
-              <span>Operations</span>
+              <span>Business</span>
             </TabsTrigger>
             <TabsTrigger value="tax" className="flex items-center space-x-1 text-xs">
               <DollarSign className="h-3 w-3" />
@@ -251,36 +260,261 @@ const Dashboard = () => {
               </CardContent>
             </Card>
 
+            {/* Risk Scoring System */}
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  🎯 Compliance Risk Score: 🔴 HIGH RISK (Score: 78/100)
+                </CardTitle>
+                <CardDescription>
+                  Multi-agency risk assessment based on overdue tasks and inspection history
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-3">Risk Factors:</h4>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between p-2 bg-red-50 rounded">
+                        <span className="text-sm">🔴 Cal/OSHA: 3 overdue critical tasks</span>
+                        <Badge variant="destructive">Critical</Badge>
+                      </div>
+                      <div className="flex items-center justify-between p-2 bg-yellow-50 rounded">
+                        <span className="text-sm">🟡 Health Dept: 1 permit expiring in 15 days</span>
+                        <Badge variant="secondary">Warning</Badge>
+                      </div>
+                      <div className="flex items-center justify-between p-2 bg-yellow-50 rounded">
+                        <span className="text-sm">🟡 Labor Compliance: 2 pending wage audits</span>
+                        <Badge variant="secondary">Warning</Badge>
+                      </div>
+                      <div className="flex items-center justify-between p-2 bg-green-50 rounded">
+                        <span className="text-sm">🟢 Fire Safety: All current</span>
+                        <Badge variant="default">Good</Badge>
+                      </div>
+                      <div className="flex items-center justify-between p-2 bg-green-50 rounded">
+                        <span className="text-sm">🟢 ABC Licensing: All current</span>
+                        <Badge variant="default">Good</Badge>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-3">Recommended Actions:</h4>
+                    <ol className="list-decimal list-inside space-y-1 text-sm text-gray-600">
+                      <li>Complete Cal/OSHA ergonomic assessment immediately</li>
+                      <li>Schedule health permit renewal appointment</li>
+                      <li>Review break period compliance documentation</li>
+                    </ol>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Cost Avoidance Dashboard */}
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  💰 Compliance Shield Value This Month
+                </CardTitle>
+                <CardDescription>
+                  Penalties avoided and value delivered through proactive compliance management
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600">$47,248</div>
+                    <div className="text-sm text-gray-600">Penalties Avoided</div>
+                    <div className="text-xs text-gray-500 mt-1">
+                      Cal/OSHA: $15,873 • Health: $25,000 • Labor: $6,375
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-600">32 hrs</div>
+                    <div className="text-sm text-gray-600">Time Saved ($1,280 value)</div>
+                    <div className="text-xs text-gray-500 mt-1">
+                      Consultant fees avoided: $2,500
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-600">307,798%</div>
+                    <div className="text-sm text-gray-600">ROI This Month</div>
+                    <div className="text-xs text-gray-500 mt-1">
+                      Your investment: $16.58/month
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Menu Analysis Results */}
             {businessData.menuFile && (
               <Card>
                 <CardHeader>
-                  <CardTitle>Menu Analysis Results</CardTitle>
+                  <CardTitle>Menu Compliance Analysis Results</CardTitle>
                   <CardDescription>
-                    Based on your uploaded menu, we've identified the following compliance requirements:
+                    Based on your uploaded menu, we've identified the following California compliance requirements:
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="p-4 bg-yellow-50 rounded-lg">
-                      <h4 className="font-semibold text-yellow-800">Meat Products Detected</h4>
-                      <p className="text-sm text-yellow-700 mt-1">
-                        Requires: Halal certification, meat safety standards, temperature monitoring
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="p-4 bg-red-50 rounded-lg">
+                      <h4 className="font-semibold text-red-800">Meat Products Detected</h4>
+                      <p className="text-sm text-red-700 mt-1">
+                        Cal/OSHA meat handling safety, HACCP plans, temperature logs, supplier verification
                       </p>
                     </div>
                     <div className="p-4 bg-blue-50 rounded-lg">
                       <h4 className="font-semibold text-blue-800">Dairy Products Detected</h4>
                       <p className="text-sm text-blue-700 mt-1">
-                        Requires: Australian dairy regulations compliance, storage temperature logs
+                        FDA dairy standards, CA health dept storage requirements, allergen labeling (CA Prop 65)
+                      </p>
+                    </div>
+                    <div className="p-4 bg-purple-50 rounded-lg">
+                      <h4 className="font-semibold text-purple-800">Alcohol Detected</h4>
+                      <p className="text-sm text-purple-700 mt-1">
+                        CA ABC licensing required, server training certification, responsible beverage service
+                      </p>
+                    </div>
+                    <div className="p-4 bg-green-50 rounded-lg">
+                      <h4 className="font-semibold text-green-800">Seafood Items</h4>
+                      <p className="text-sm text-green-700 mt-1">
+                        Mercury disclosure requirements, sustainable sourcing labels, shellfish tags retention
+                      </p>
+                    </div>
+                    <div className="p-4 bg-orange-50 rounded-lg">
+                      <h4 className="font-semibold text-orange-800">Nuts/Allergens</h4>
+                      <p className="text-sm text-orange-700 mt-1">
+                        CA allergen disclosure laws, cross-contamination prevention, staff training requirements
+                      </p>
+                    </div>
+                    <div className="p-4 bg-yellow-50 rounded-lg">
+                      <h4 className="font-semibold text-yellow-800">Organic Claims</h4>
+                      <p className="text-sm text-yellow-700 mt-1">
+                        USDA organic certification, CA organic standards, truth-in-advertising compliance
                       </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             )}
+
+            {/* Multi-Agency Inspection Summary */}
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle>📊 Multi-Agency Inspection Summary</CardTitle>
+                <CardDescription>
+                  Recent inspection activity and compliance rates across all agencies
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-3">Inspection Results:</h4>
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
+                        <span className="text-sm">County Health Inspections: 8</span>
+                        <Badge variant="default">Pass Rate: 75%</Badge>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-red-50 rounded">
+                        <span className="text-sm">Cal/OSHA Site Visits: 2</span>
+                        <Badge variant="destructive">Compliance Rate: 50%</Badge>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-green-50 rounded">
+                        <span className="text-sm">Fire Department Inspections: 3</span>
+                        <Badge variant="default">Pass Rate: 100%</Badge>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-purple-50 rounded">
+                        <span className="text-sm">ABC Compliance Checks: 1</span>
+                        <Badge variant="default">Pass Rate: 100%</Badge>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-orange-50 rounded">
+                        <span className="text-sm">Building Code Inspections: 2</span>
+                        <Badge variant="secondary">Pass Rate: 50%</Badge>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-3">Risk Factors This Month:</h4>
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center p-2 bg-red-50 rounded">
+                        <span className="text-sm">Critical Violations: 3</span>
+                        <span className="text-xs text-red-600">Immediate correction required</span>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-orange-50 rounded">
+                        <span className="text-sm">Major Violations: 7</span>
+                        <span className="text-xs text-orange-600">30-day correction period</span>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-yellow-50 rounded">
+                        <span className="text-sm">Minor Violations: 12</span>
+                        <span className="text-xs text-yellow-600">Next inspection cycle</span>
+                      </div>
+                      <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
+                        <span className="text-sm">Warnings Issued: 5</span>
+                        <span className="text-xs text-blue-600">Educational, no penalty</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Multi-Agency Area Activity */}
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle>📍 Multi-Agency Area Activity</CardTitle>
+                <CardDescription>
+                  Recent compliance activity and violations in your area
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg">
+                    <h4 className="font-semibold text-gray-900">Sunset Bistro - 456 Sunset Blvd, West Hollywood (0.3mi away)</h4>
+                    <div className="mt-2 space-y-1 text-sm">
+                      <div className="flex justify-between">
+                        <span>County Health: 2024-07-15</span>
+                        <span className="text-red-600">Critical violations: 2 | Reinspection required</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Cal/OSHA: 2024-07-20</span>
+                        <span className="text-red-600">Ergonomic violations | $5,000 penalty issued</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="border-l-4 border-orange-500 bg-orange-50 p-4 rounded-r-lg">
+                    <h4 className="font-semibold text-gray-900">Marina Grill - 789 Ocean Ave, Santa Monica (0.8mi away)</h4>
+                    <div className="mt-2 space-y-1 text-sm">
+                      <div className="flex justify-between">
+                        <span>Fire Dept: 2024-07-18</span>
+                        <span className="text-orange-600">Suppression system failure | Closure order</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>ABC: 2024-07-22</span>
+                        <span className="text-orange-600">Underage service violation | License suspended 30 days</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="border-l-4 border-yellow-500 bg-yellow-50 p-4 rounded-r-lg">
+                    <h4 className="font-semibold text-gray-900">Downtown Deli - 321 Spring St, Downtown LA (1.2mi away)</h4>
+                    <div className="mt-2 space-y-1 text-sm">
+                      <div className="flex justify-between">
+                        <span>Building Dept: 2024-07-25</span>
+                        <span className="text-yellow-600">ADA compliance issues | 60-day correction period</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Environmental: 2024-07-26</span>
+                        <span className="text-yellow-600">Grease disposal violation | $2,500 fine</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </TabsContent>
 
-          <TabsContent value="haccp">
+          <TabsContent value="calosha">
             <div className="space-y-6">
               {/* Temperature Controls */}
               <Card>
