@@ -1921,6 +1921,448 @@ const Dashboard = () => {
             </div>
           </TabsContent>
 
+          <TabsContent value="labor">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Users className="h-5 w-5 text-blue-500 mr-2" />
+                  👷 LABOR & EMPLOYMENT COMPLIANCE
+                </CardTitle>
+                <CardDescription>
+                  California-specific labor laws and employment compliance requirements
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Minimum Wage Compliance Audit ($16.00+ statewide, varies by city)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Overtime Calculation Verification (CA: 8hrs/day + 40hrs/week rules)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Break Period Documentation (10-min paid break every 4 hours)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Meal Period Compliance (30-min unpaid break for 5+ hour shifts)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Split Shift Premium Calculation (Pay premium for interrupted shifts)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Reporting Time Pay Verification (2-4 hours minimum when called in)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Sick Leave Accrual Tracking (24 hours/year minimum accrual)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Workers' Compensation Insurance Certificate Posting</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">State Disability Insurance (SDI) Compliance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">New Hire Reporting (Report to state within 20 days)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Detailed Wage Statement Requirements (CA-specific pay stub info)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Personnel File Maintenance (Required documents + employee access)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Workplace Anti-Discrimination Policy Updates</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Required Labor Law Poster Display (15+ state/federal posters)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">State Unemployment Tax (SUTA) Quarterly Filing</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Employment Training Tax (ETT) Payment (0.1% on first $7K wages)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">California Income Tax Withholding & Remittance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Tip Pooling Policy Compliance (CA-specific rules)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">On-Call Time Compensation Documentation</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
+                    <span className="text-sm">Supervisor Anti-Harassment Training (Required every 2 years)</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="environmental">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <AlertTriangle className="h-5 w-5 text-green-500 mr-2" />
+                  🌱 ENVIRONMENTAL & WASTE MANAGEMENT
+                </CardTitle>
+                <CardDescription>
+                  CalEPA and local environmental compliance requirements
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Grease Waste Disposal Contract (Licensed hauler + disposal receipts)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Grease Interceptor Cleaning Logs (Quarterly professional cleaning)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Hazardous Waste Disposal (Chemicals, batteries, fluorescent bulbs)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Mandatory Recycling Program Compliance (City-specific requirements)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Food Waste Diversion/Composting (Required in SF, LA, other cities)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Cardboard/Paper Recycling Separation</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Cooking Oil Disposal Documentation (Licensed disposal company)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Wastewater Discharge Permit Compliance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Water Conservation Measures (Low-flow fixtures, leak detection)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Kitchen Hood Air Quality Compliance (Professional cleaning quarterly)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Chemical Storage & Labeling (Safety Data Sheets maintenance)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Spill Prevention & Cleanup Procedures</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Refrigerant Management (HVAC leak detection & proper disposal)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Underground Storage Tank Monitoring (If applicable)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-green-600" />
+                    <span className="text-sm">Air Quality Permit Compliance (Commercial cooking equipment)</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="fire">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Shield className="h-5 w-5 text-red-500 mr-2" />
+                  🔥 FIRE SAFETY & PREVENTION
+                </CardTitle>
+                <CardDescription>
+                  Local fire department inspections and fire safety compliance
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Kitchen Suppression System Semi-Annual Inspection</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Fire Extinguisher Monthly Visual Checks</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Fire Extinguisher Annual Professional Service</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Sprinkler System Annual Inspection</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Fire Alarm System Annual Testing</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Emergency Lighting Monthly Testing</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Exit Sign Illumination & Battery Backup Testing</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Egress Path Clearance Verification</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Maximum Occupancy Limit Posting</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Flammable Material Storage Compliance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Electrical Safety Audit (Extension cords, outlet loads)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Fire Evacuation Plan Documentation</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Employee Fire Safety Training Records</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Emergency Contact Information Updates</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Fire Lane Clearance Maintenance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Hot Work Permit Applications (For welding/cutting work)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-red-600" />
+                    <span className="text-sm">Propane Storage Safety Compliance</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="abc">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-purple-500 mr-2" />
+                  🍺 ABC LICENSING (ALCOHOLIC BEVERAGE CONTROL)
+                </CardTitle>
+                <CardDescription>
+                  California Department of Alcoholic Beverage Control compliance - "ABC" = Alcoholic Beverage Control
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">On-Sale License Annual Renewal (Type 41: Beer/Wine or Type 47: Full Bar)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Off-Sale License Renewal (If selling packaged alcohol)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Responsible Beverage Service (RBS) Training for All Staff</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Age Verification Policy Documentation</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Staff ID Checking Training & Certification</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Alcohol Service Hours Compliance (Typically 11 AM - 2 AM)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Distance Requirements Verification (From schools, churches)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Licensed Distributor Purchase Verification</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Alcohol Inventory Control System</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Happy Hour Advertising Compliance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Entertainment Permit (For live music, dancing)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Security Personnel Licensing (If using bouncers)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Incident Reporting Procedures (Fights, overservice, etc.)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Promotional Materials Compliance Review</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Tobacco Sales License (If selling tobacco products)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
+                    <span className="text-sm">Liquor Liability Insurance Certificate Filing</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="business">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Clock className="h-5 w-5 text-orange-500 mr-2" />
+                  🏢 BUSINESS LICENSING & PERMITS
+                </CardTitle>
+                <CardDescription>
+                  Multi-level business operations and licensing compliance
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">City Business License Annual Renewal</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Zoning Compliance Certificate Verification</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Building Permit Compliance (For any structural changes)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Outdoor Signage Permit Compliance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Sidewalk Dining Permit (For outdoor seating)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Parking Requirement Compliance Verification</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Noise Ordinance Compliance (Music, equipment, HVAC limits)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">California Seller's Permit Maintenance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">DBA Filing Updates (Doing Business As registration)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Corporate Good Standing with CA Secretary of State</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">ADA Compliance Certificate Verification</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Music Licensing (ASCAP, BMI, SESAC for copyrighted music)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Valet Parking Permit (If offering valet services)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Food Truck Mobile Vendor Permits</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Off-Site Catering License</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Entertainment License (Live music, karaoke, dancing)</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">General Liability Insurance Certificate Filing</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Workers' Compensation Bond Verification</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">Federal EIN Registration Maintenance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
+                    <span className="text-sm">State Tax Registration Updates</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
           <TabsContent value="privacy">
             <Card>
               <CardHeader>
