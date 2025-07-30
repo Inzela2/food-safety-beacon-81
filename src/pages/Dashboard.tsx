@@ -1933,88 +1933,180 @@ const Dashboard = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Minimum Wage Compliance Audit ($16.00+ statewide, varies by city)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Overtime Calculation Verification (CA: 8hrs/day + 40hrs/week rules)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Break Period Documentation (10-min paid break every 4 hours)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Meal Period Compliance (30-min unpaid break for 5+ hour shifts)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Split Shift Premium Calculation (Pay premium for interrupted shifts)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Reporting Time Pay Verification (2-4 hours minimum when called in)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Sick Leave Accrual Tracking (24 hours/year minimum accrual)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Workers' Compensation Insurance Certificate Posting</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">State Disability Insurance (SDI) Compliance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">New Hire Reporting (Report to state within 20 days)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Detailed Wage Statement Requirements (CA-specific pay stub info)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Personnel File Maintenance (Required documents + employee access)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Workplace Anti-Discrimination Policy Updates</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Required Labor Law Poster Display (15+ state/federal posters)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">State Unemployment Tax (SUTA) Quarterly Filing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Employment Training Tax (ETT) Payment (0.1% on first $7K wages)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">California Income Tax Withholding & Remittance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Tip Pooling Policy Compliance (CA-specific rules)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">On-Call Time Compensation Documentation</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm">Supervisor Anti-Harassment Training (Required every 2 years)</span>
-                  </div>
-                </div>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Task</TableHead>
+                      <TableHead>Frequency</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead>Legal Ref</TableHead>
+                      <TableHead>Proof</TableHead>
+                      <TableHead>Actions</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Minimum Wage Compliance Audit</TableCell>
+                      <TableCell>Quarterly</TableCell>
+                      <TableCell><Badge variant="destructive">Overdue</Badge></TableCell>
+                      <TableCell>CA Labor Code §1197</TableCell>
+                      <TableCell>Payroll audit report</TableCell>
+                      <TableCell><Button size="sm">Conduct Audit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Overtime Calculation Verification</TableCell>
+                      <TableCell>Weekly</TableCell>
+                      <TableCell><Badge variant="secondary">Pending</Badge></TableCell>
+                      <TableCell>CA Labor Code §510</TableCell>
+                      <TableCell>Overtime calculation worksheet</TableCell>
+                      <TableCell><Button size="sm">Verify Calculations</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Break Period Documentation</TableCell>
+                      <TableCell>Daily</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Labor Code §512</TableCell>
+                      <TableCell>Break period logs</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Logs</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Meal Period Compliance</TableCell>
+                      <TableCell>Daily</TableCell>
+                      <TableCell><Badge variant="destructive">Non-Compliant</Badge></TableCell>
+                      <TableCell>CA Labor Code §512</TableCell>
+                      <TableCell>Meal period attestation forms</TableCell>
+                      <TableCell><Button size="sm">Fix Compliance</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Split Shift Premium Calculation</TableCell>
+                      <TableCell>Per occurrence</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Labor Code §852</TableCell>
+                      <TableCell>Split shift pay records</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Review Records</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Reporting Time Pay Verification</TableCell>
+                      <TableCell>Per occurrence</TableCell>
+                      <TableCell><Badge variant="secondary">Review Needed</Badge></TableCell>
+                      <TableCell>CA Labor Code §204</TableCell>
+                      <TableCell>Call-in pay documentation</TableCell>
+                      <TableCell><Button size="sm">Review Policy</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Sick Leave Accrual Tracking</TableCell>
+                      <TableCell>Monthly</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Labor Code §246</TableCell>
+                      <TableCell>Sick leave accrual reports</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Reports</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Workers' Compensation Certificate Posting</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="default">Posted</Badge></TableCell>
+                      <TableCell>CA Labor Code §3800</TableCell>
+                      <TableCell>Posted certificate photo</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Verify Posting</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">State Disability Insurance (SDI) Compliance</TableCell>
+                      <TableCell>Monthly</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>CA Unemployment Code §2901</TableCell>
+                      <TableCell>SDI payment records</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Payments</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">New Hire Reporting</TableCell>
+                      <TableCell>Per hire (within 20 days)</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>CA Unemployment Code §1088.5</TableCell>
+                      <TableCell>New hire report confirmations</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Reports</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Detailed Wage Statement Requirements</TableCell>
+                      <TableCell>Each pay period</TableCell>
+                      <TableCell><Badge variant="secondary">Review Needed</Badge></TableCell>
+                      <TableCell>CA Labor Code §226</TableCell>
+                      <TableCell>Sample pay stubs</TableCell>
+                      <TableCell><Button size="sm">Review Format</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Personnel File Maintenance</TableCell>
+                      <TableCell>Ongoing</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Labor Code §1198.5</TableCell>
+                      <TableCell>Personnel file audit</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Audit Files</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Anti-Discrimination Policy Updates</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="default">Updated</Badge></TableCell>
+                      <TableCell>CA Gov Code §12900</TableCell>
+                      <TableCell>Updated policy document</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Review Policy</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Required Labor Law Poster Display</TableCell>
+                      <TableCell>Annual verification</TableCell>
+                      <TableCell><Badge variant="destructive">Outdated</Badge></TableCell>
+                      <TableCell>CA Labor Code §1197.5</TableCell>
+                      <TableCell>Current poster inventory</TableCell>
+                      <TableCell><Button size="sm">Update Posters</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">State Unemployment Tax (SUTA) Filing</TableCell>
+                      <TableCell>Quarterly</TableCell>
+                      <TableCell><Badge variant="secondary">Due Next Week</Badge></TableCell>
+                      <TableCell>CA Unemployment Code §976</TableCell>
+                      <TableCell>SUTA filing confirmations</TableCell>
+                      <TableCell><Button size="sm">File Return</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Employment Training Tax (ETT) Payment</TableCell>
+                      <TableCell>Quarterly</TableCell>
+                      <TableCell><Badge variant="default">Paid</Badge></TableCell>
+                      <TableCell>CA Unemployment Code §976.6</TableCell>
+                      <TableCell>ETT payment receipts</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Receipts</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">CA Income Tax Withholding & Remittance</TableCell>
+                      <TableCell>Monthly</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>CA Rev & Tax Code §13020</TableCell>
+                      <TableCell>Tax remittance confirmations</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Status</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Tip Pooling Policy Compliance</TableCell>
+                      <TableCell>Ongoing</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Labor Code §351</TableCell>
+                      <TableCell>Tip pooling documentation</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Review Policy</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">On-Call Time Compensation</TableCell>
+                      <TableCell>Per occurrence</TableCell>
+                      <TableCell><Badge variant="secondary">Review Needed</Badge></TableCell>
+                      <TableCell>CA Labor Code §510</TableCell>
+                      <TableCell>On-call time records</TableCell>
+                      <TableCell><Button size="sm">Review Records</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Supervisor Anti-Harassment Training</TableCell>
+                      <TableCell>Every 2 years</TableCell>
+                      <TableCell><Badge variant="destructive">Overdue</Badge></TableCell>
+                      <TableCell>CA Gov Code §12950.1</TableCell>
+                      <TableCell>Training certificates</TableCell>
+                      <TableCell><Button size="sm">Schedule Training</Button></TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
               </CardContent>
             </Card>
           </TabsContent>
@@ -2031,68 +2123,140 @@ const Dashboard = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Grease Waste Disposal Contract (Licensed hauler + disposal receipts)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Grease Interceptor Cleaning Logs (Quarterly professional cleaning)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Hazardous Waste Disposal (Chemicals, batteries, fluorescent bulbs)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Mandatory Recycling Program Compliance (City-specific requirements)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Food Waste Diversion/Composting (Required in SF, LA, other cities)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Cardboard/Paper Recycling Separation</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Cooking Oil Disposal Documentation (Licensed disposal company)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Wastewater Discharge Permit Compliance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Water Conservation Measures (Low-flow fixtures, leak detection)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Kitchen Hood Air Quality Compliance (Professional cleaning quarterly)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Chemical Storage & Labeling (Safety Data Sheets maintenance)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Spill Prevention & Cleanup Procedures</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Refrigerant Management (HVAC leak detection & proper disposal)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Underground Storage Tank Monitoring (If applicable)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-green-600" />
-                    <span className="text-sm">Air Quality Permit Compliance (Commercial cooking equipment)</span>
-                  </div>
-                </div>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Task</TableHead>
+                      <TableHead>Frequency</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead>Legal Ref</TableHead>
+                      <TableHead>Proof</TableHead>
+                      <TableHead>Actions</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Grease Waste Disposal Contract</TableCell>
+                      <TableCell>Annual renewal</TableCell>
+                      <TableCell><Badge variant="default">Active</Badge></TableCell>
+                      <TableCell>CA Water Code §13260</TableCell>
+                      <TableCell>Licensed hauler contract</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Contract</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Grease Interceptor Cleaning</TableCell>
+                      <TableCell>Quarterly</TableCell>
+                      <TableCell><Badge variant="secondary">Due in 2 weeks</Badge></TableCell>
+                      <TableCell>Local Plumbing Code</TableCell>
+                      <TableCell>Professional cleaning receipts</TableCell>
+                      <TableCell><Button size="sm">Schedule Cleaning</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Hazardous Waste Disposal</TableCell>
+                      <TableCell>As needed</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Health & Safety Code §25100</TableCell>
+                      <TableCell>Disposal manifests</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Records</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Mandatory Recycling Program</TableCell>
+                      <TableCell>Ongoing</TableCell>
+                      <TableCell><Badge variant="destructive">Non-Compliant</Badge></TableCell>
+                      <TableCell>Local Municipal Code</TableCell>
+                      <TableCell>Recycling service contract</TableCell>
+                      <TableCell><Button size="sm">Setup Program</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Food Waste Diversion/Composting</TableCell>
+                      <TableCell>Daily</TableCell>
+                      <TableCell><Badge variant="secondary">Partial</Badge></TableCell>
+                      <TableCell>SB 1383 (CA)</TableCell>
+                      <TableCell>Compost service records</TableCell>
+                      <TableCell><Button size="sm">Expand Program</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Cardboard/Paper Recycling</TableCell>
+                      <TableCell>Daily</TableCell>
+                      <TableCell><Badge variant="default">Active</Badge></TableCell>
+                      <TableCell>Local Municipal Code</TableCell>
+                      <TableCell>Recycling pickup logs</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Logs</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Cooking Oil Disposal</TableCell>
+                      <TableCell>Weekly pickup</TableCell>
+                      <TableCell><Badge variant="default">Active</Badge></TableCell>
+                      <TableCell>CA Health & Safety Code §25100</TableCell>
+                      <TableCell>Disposal company receipts</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Schedule</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Wastewater Discharge Permit</TableCell>
+                      <TableCell>Annual renewal</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>CA Water Code §13260</TableCell>
+                      <TableCell>Discharge permit certificate</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Permit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Water Conservation Measures</TableCell>
+                      <TableCell>Ongoing verification</TableCell>
+                      <TableCell><Badge variant="default">Implemented</Badge></TableCell>
+                      <TableCell>CA Water Code §350</TableCell>
+                      <TableCell>Conservation equipment audit</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Verify Measures</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Kitchen Hood Air Quality</TableCell>
+                      <TableCell>Quarterly cleaning</TableCell>
+                      <TableCell><Badge variant="secondary">Due Next Month</Badge></TableCell>
+                      <TableCell>Local Air Quality Code</TableCell>
+                      <TableCell>Professional cleaning certs</TableCell>
+                      <TableCell><Button size="sm">Schedule Cleaning</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Chemical Storage & Labeling</TableCell>
+                      <TableCell>Monthly inspection</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Health & Safety Code §25500</TableCell>
+                      <TableCell>SDS documentation</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Inspect Storage</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Spill Prevention & Cleanup</TableCell>
+                      <TableCell>Annual plan review</TableCell>
+                      <TableCell><Badge variant="default">Updated</Badge></TableCell>
+                      <TableCell>CA Water Code §13300</TableCell>
+                      <TableCell>Spill response plan</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Review Plan</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Refrigerant Management</TableCell>
+                      <TableCell>Annual inspection</TableCell>
+                      <TableCell><Badge variant="secondary">Due in 3 months</Badge></TableCell>
+                      <TableCell>EPA Section 608</TableCell>
+                      <TableCell>Leak detection reports</TableCell>
+                      <TableCell><Button size="sm">Schedule Inspection</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Underground Storage Tank Monitoring</TableCell>
+                      <TableCell>Monthly</TableCell>
+                      <TableCell><Badge variant="outline">N/A - None on site</Badge></TableCell>
+                      <TableCell>CA Health & Safety Code §25280</TableCell>
+                      <TableCell>Not applicable</TableCell>
+                      <TableCell><Button size="sm" variant="outline" disabled>N/A</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Air Quality Permit Compliance</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>Local Air Quality District</TableCell>
+                      <TableCell>Equipment permit certificates</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Permits</Button></TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
               </CardContent>
             </Card>
           </TabsContent>
@@ -2109,76 +2273,156 @@ const Dashboard = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Kitchen Suppression System Semi-Annual Inspection</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Fire Extinguisher Monthly Visual Checks</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Fire Extinguisher Annual Professional Service</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Sprinkler System Annual Inspection</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Fire Alarm System Annual Testing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Emergency Lighting Monthly Testing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Exit Sign Illumination & Battery Backup Testing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Egress Path Clearance Verification</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Maximum Occupancy Limit Posting</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Flammable Material Storage Compliance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Electrical Safety Audit (Extension cords, outlet loads)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Fire Evacuation Plan Documentation</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Employee Fire Safety Training Records</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Emergency Contact Information Updates</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Fire Lane Clearance Maintenance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Hot Work Permit Applications (For welding/cutting work)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-red-600" />
-                    <span className="text-sm">Propane Storage Safety Compliance</span>
-                  </div>
-                </div>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Task</TableHead>
+                      <TableHead>Frequency</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead>Legal Ref</TableHead>
+                      <TableHead>Proof</TableHead>
+                      <TableHead>Actions</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Kitchen Suppression System Inspection</TableCell>
+                      <TableCell>Semi-Annual</TableCell>
+                      <TableCell><Badge variant="destructive">Overdue by 30 days</Badge></TableCell>
+                      <TableCell>NFPA 96</TableCell>
+                      <TableCell>Inspection certificate</TableCell>
+                      <TableCell><Button size="sm">Schedule Inspection</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Fire Extinguisher Monthly Checks</TableCell>
+                      <TableCell>Monthly</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>NFPA 10</TableCell>
+                      <TableCell>Monthly inspection tags</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Tags</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Fire Extinguisher Professional Service</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="secondary">Due in 2 months</Badge></TableCell>
+                      <TableCell>NFPA 10</TableCell>
+                      <TableCell>Service certification</TableCell>
+                      <TableCell><Button size="sm">Schedule Service</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Sprinkler System Annual Inspection</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="default">Passed</Badge></TableCell>
+                      <TableCell>NFPA 25</TableCell>
+                      <TableCell>ITM report</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Report</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Fire Alarm System Annual Testing</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="default">Passed</Badge></TableCell>
+                      <TableCell>NFPA 72</TableCell>
+                      <TableCell>Testing report</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Report</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Emergency Lighting Monthly Testing</TableCell>
+                      <TableCell>Monthly</TableCell>
+                      <TableCell><Badge variant="secondary">Due This Week</Badge></TableCell>
+                      <TableCell>NFPA 101</TableCell>
+                      <TableCell>Test log book</TableCell>
+                      <TableCell><Button size="sm">Conduct Test</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Exit Sign Illumination Testing</TableCell>
+                      <TableCell>Monthly</TableCell>
+                      <TableCell><Badge variant="default">Passed</Badge></TableCell>
+                      <TableCell>NFPA 101</TableCell>
+                      <TableCell>Testing log</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Log</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Egress Path Clearance Verification</TableCell>
+                      <TableCell>Daily</TableCell>
+                      <TableCell><Badge variant="default">Clear</Badge></TableCell>
+                      <TableCell>NFPA 101</TableCell>
+                      <TableCell>Daily checklist</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Now</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Maximum Occupancy Limit Posting</TableCell>
+                      <TableCell>Annual verification</TableCell>
+                      <TableCell><Badge variant="default">Posted</Badge></TableCell>
+                      <TableCell>Local Fire Code</TableCell>
+                      <TableCell>Posted occupancy sign</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Verify Posting</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Flammable Material Storage</TableCell>
+                      <TableCell>Weekly inspection</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>NFPA 30</TableCell>
+                      <TableCell>Storage inspection log</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Inspect Storage</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Electrical Safety Audit</TableCell>
+                      <TableCell>Quarterly</TableCell>
+                      <TableCell><Badge variant="secondary">Due Next Month</Badge></TableCell>
+                      <TableCell>NFPA 70</TableCell>
+                      <TableCell>Electrical safety checklist</TableCell>
+                      <TableCell><Button size="sm">Schedule Audit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Fire Evacuation Plan Documentation</TableCell>
+                      <TableCell>Annual review</TableCell>
+                      <TableCell><Badge variant="default">Updated</Badge></TableCell>
+                      <TableCell>NFPA 101</TableCell>
+                      <TableCell>Evacuation plan document</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Review Plan</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Employee Fire Safety Training</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="destructive">Overdue</Badge></TableCell>
+                      <TableCell>Local Fire Code</TableCell>
+                      <TableCell>Training certificates</TableCell>
+                      <TableCell><Button size="sm">Schedule Training</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Emergency Contact Information</TableCell>
+                      <TableCell>Quarterly update</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>NFPA 101</TableCell>
+                      <TableCell>Posted contact list</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Update Contacts</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Fire Lane Clearance Maintenance</TableCell>
+                      <TableCell>Daily</TableCell>
+                      <TableCell><Badge variant="default">Clear</Badge></TableCell>
+                      <TableCell>Local Fire Code</TableCell>
+                      <TableCell>Daily clearance log</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Lanes</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Hot Work Permit Applications</TableCell>
+                      <TableCell>Per occurrence</TableCell>
+                      <TableCell><Badge variant="outline">N/A - No current work</Badge></TableCell>
+                      <TableCell>NFPA 51B</TableCell>
+                      <TableCell>Permit applications</TableCell>
+                      <TableCell><Button size="sm" variant="outline" disabled>Apply When Needed</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Propane Storage Safety</TableCell>
+                      <TableCell>Monthly inspection</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>NFPA 58</TableCell>
+                      <TableCell>Storage inspection log</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Inspect Storage</Button></TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
               </CardContent>
             </Card>
           </TabsContent>
@@ -2195,72 +2439,148 @@ const Dashboard = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">On-Sale License Annual Renewal (Type 41: Beer/Wine or Type 47: Full Bar)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Off-Sale License Renewal (If selling packaged alcohol)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Responsible Beverage Service (RBS) Training for All Staff</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Age Verification Policy Documentation</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Staff ID Checking Training & Certification</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Alcohol Service Hours Compliance (Typically 11 AM - 2 AM)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Distance Requirements Verification (From schools, churches)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Licensed Distributor Purchase Verification</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Alcohol Inventory Control System</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Happy Hour Advertising Compliance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Entertainment Permit (For live music, dancing)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Security Personnel Licensing (If using bouncers)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Incident Reporting Procedures (Fights, overservice, etc.)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Promotional Materials Compliance Review</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Tobacco Sales License (If selling tobacco products)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-purple-600" />
-                    <span className="text-sm">Liquor Liability Insurance Certificate Filing</span>
-                  </div>
-                </div>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Task</TableHead>
+                      <TableHead>Frequency</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead>Legal Ref</TableHead>
+                      <TableHead>Proof</TableHead>
+                      <TableHead>Actions</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">On-Sale License Annual Renewal</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="secondary">Due in 3 months</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §23300</TableCell>
+                      <TableCell>Current license certificate</TableCell>
+                      <TableCell><Button size="sm">Start Renewal</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Off-Sale License Renewal</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="outline">N/A - No off-sale</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §23396</TableCell>
+                      <TableCell>Not applicable</TableCell>
+                      <TableCell><Button size="sm" variant="outline" disabled>N/A</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">RBS Training for All Staff</TableCell>
+                      <TableCell>Every 3 years</TableCell>
+                      <TableCell><Badge variant="destructive">2 staff overdue</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25681</TableCell>
+                      <TableCell>RBS certificates</TableCell>
+                      <TableCell><Button size="sm">Schedule Training</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Age Verification Policy</TableCell>
+                      <TableCell>Annual review</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25658</TableCell>
+                      <TableCell>Written policy document</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Review Policy</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Staff ID Checking Training</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="default">Completed</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25658</TableCell>
+                      <TableCell>Training documentation</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Records</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Alcohol Service Hours Compliance</TableCell>
+                      <TableCell>Daily verification</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25631</TableCell>
+                      <TableCell>Posted hours of operation</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Verify Hours</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Distance Requirements Verification</TableCell>
+                      <TableCell>One-time (location specific)</TableCell>
+                      <TableCell><Badge variant="default">Verified</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §23958</TableCell>
+                      <TableCell>Distance measurement report</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Report</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Licensed Distributor Verification</TableCell>
+                      <TableCell>Per purchase</TableCell>
+                      <TableCell><Badge variant="default">Verified</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §23355</TableCell>
+                      <TableCell>Distributor license records</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Licenses</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Alcohol Inventory Control</TableCell>
+                      <TableCell>Daily reconciliation</TableCell>
+                      <TableCell><Badge variant="secondary">Behind 3 days</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25503</TableCell>
+                      <TableCell>Inventory logs</TableCell>
+                      <TableCell><Button size="sm">Update Inventory</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Happy Hour Advertising Compliance</TableCell>
+                      <TableCell>Per advertisement</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25750</TableCell>
+                      <TableCell>Advertisement review log</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Review Ads</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Entertainment Permit</TableCell>
+                      <TableCell>Per event/Annual</TableCell>
+                      <TableCell><Badge variant="secondary">Pending for live music</Badge></TableCell>
+                      <TableCell>Local Municipal Code</TableCell>
+                      <TableCell>Entertainment permit</TableCell>
+                      <TableCell><Button size="sm">Apply for Permit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Security Personnel Licensing</TableCell>
+                      <TableCell>Per guard</TableCell>
+                      <TableCell><Badge variant="outline">N/A - No security</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §7580</TableCell>
+                      <TableCell>Security guard licenses</TableCell>
+                      <TableCell><Button size="sm" variant="outline" disabled>N/A</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Incident Reporting Procedures</TableCell>
+                      <TableCell>Per incident</TableCell>
+                      <TableCell><Badge variant="default">Documented</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25658</TableCell>
+                      <TableCell>Incident report forms</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Procedures</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Promotional Materials Review</TableCell>
+                      <TableCell>Before each promotion</TableCell>
+                      <TableCell><Badge variant="default">Reviewed</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25750</TableCell>
+                      <TableCell>Material approval log</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Review Current</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Tobacco Sales License</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="outline">N/A - No tobacco sales</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §22971</TableCell>
+                      <TableCell>Tobacco retailer license</TableCell>
+                      <TableCell><Button size="sm" variant="outline" disabled>N/A</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Liquor Liability Insurance</TableCell>
+                      <TableCell>Annual renewal</TableCell>
+                      <TableCell><Badge variant="default">Current - $1M coverage</Badge></TableCell>
+                      <TableCell>CA Bus & Prof Code §25658.4</TableCell>
+                      <TableCell>Insurance certificate</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Certificate</Button></TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
               </CardContent>
             </Card>
           </TabsContent>
@@ -2277,88 +2597,180 @@ const Dashboard = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">City Business License Annual Renewal</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Zoning Compliance Certificate Verification</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Building Permit Compliance (For any structural changes)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Outdoor Signage Permit Compliance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Sidewalk Dining Permit (For outdoor seating)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Parking Requirement Compliance Verification</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Noise Ordinance Compliance (Music, equipment, HVAC limits)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">California Seller's Permit Maintenance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">DBA Filing Updates (Doing Business As registration)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Corporate Good Standing with CA Secretary of State</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">ADA Compliance Certificate Verification</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Music Licensing (ASCAP, BMI, SESAC for copyrighted music)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Valet Parking Permit (If offering valet services)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Food Truck Mobile Vendor Permits</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Off-Site Catering License</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Entertainment License (Live music, karaoke, dancing)</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">General Liability Insurance Certificate Filing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Workers' Compensation Bond Verification</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">Federal EIN Registration Maintenance</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <input type="checkbox" className="h-4 w-4 text-orange-600" />
-                    <span className="text-sm">State Tax Registration Updates</span>
-                  </div>
-                </div>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Task</TableHead>
+                      <TableHead>Frequency</TableHead>
+                      <TableHead>Status</TableHead>
+                      <TableHead>Legal Ref</TableHead>
+                      <TableHead>Proof</TableHead>
+                      <TableHead>Actions</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">City Business License Annual Renewal</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="secondary">Due in 2 months</Badge></TableCell>
+                      <TableCell>Local Municipal Code</TableCell>
+                      <TableCell>Current business license</TableCell>
+                      <TableCell><Button size="sm">Start Renewal</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Zoning Compliance Certificate</TableCell>
+                      <TableCell>One-time verification</TableCell>
+                      <TableCell><Badge variant="default">Verified</Badge></TableCell>
+                      <TableCell>Local Zoning Code</TableCell>
+                      <TableCell>Zoning compliance letter</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Certificate</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Building Permit Compliance</TableCell>
+                      <TableCell>Per structural change</TableCell>
+                      <TableCell><Badge variant="default">No changes pending</Badge></TableCell>
+                      <TableCell>Local Building Code</TableCell>
+                      <TableCell>Building permit history</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Status</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Outdoor Signage Permit</TableCell>
+                      <TableCell>Per sign installation</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>Local Sign Ordinance</TableCell>
+                      <TableCell>Signage permit certificate</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Permit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Sidewalk Dining Permit</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="destructive">Expired</Badge></TableCell>
+                      <TableCell>Local Municipal Code</TableCell>
+                      <TableCell>Outdoor dining permit</TableCell>
+                      <TableCell><Button size="sm">Renew Permit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Parking Requirement Compliance</TableCell>
+                      <TableCell>Ongoing verification</TableCell>
+                      <TableCell><Badge variant="default">Compliant</Badge></TableCell>
+                      <TableCell>Local Parking Code</TableCell>
+                      <TableCell>Parking compliance report</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Verify Compliance</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Noise Ordinance Compliance</TableCell>
+                      <TableCell>Ongoing monitoring</TableCell>
+                      <TableCell><Badge variant="secondary">Monitor live music</Badge></TableCell>
+                      <TableCell>Local Noise Ordinance</TableCell>
+                      <TableCell>Noise level measurements</TableCell>
+                      <TableCell><Button size="sm">Check Levels</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">California Seller's Permit</TableCell>
+                      <TableCell>Maintain active status</TableCell>
+                      <TableCell><Badge variant="default">Active</Badge></TableCell>
+                      <TableCell>CA Rev & Tax Code §6051</TableCell>
+                      <TableCell>Seller's permit certificate</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Permit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">DBA Filing Updates</TableCell>
+                      <TableCell>Every 5 years</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>CA Corp Code §17910</TableCell>
+                      <TableCell>DBA filing certificate</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Filing</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Corporate Good Standing</TableCell>
+                      <TableCell>Annual filing</TableCell>
+                      <TableCell><Badge variant="default">Good Standing</Badge></TableCell>
+                      <TableCell>CA Corp Code §1500</TableCell>
+                      <TableCell>SOS certificate</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Status</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">ADA Compliance Certificate</TableCell>
+                      <TableCell>One-time verification</TableCell>
+                      <TableCell><Badge variant="secondary">Accessibility audit due</Badge></TableCell>
+                      <TableCell>ADA Title III</TableCell>
+                      <TableCell>ADA compliance report</TableCell>
+                      <TableCell><Button size="sm">Schedule Audit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Music Licensing (ASCAP/BMI/SESAC)</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="default">All licenses current</Badge></TableCell>
+                      <TableCell>Copyright Act</TableCell>
+                      <TableCell>Music license certificates</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Licenses</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Valet Parking Permit</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="outline">N/A - No valet service</Badge></TableCell>
+                      <TableCell>Local Municipal Code</TableCell>
+                      <TableCell>Not applicable</TableCell>
+                      <TableCell><Button size="sm" variant="outline" disabled>N/A</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Food Truck Mobile Vendor Permits</TableCell>
+                      <TableCell>Per location/event</TableCell>
+                      <TableCell><Badge variant="outline">N/A - No mobile operations</Badge></TableCell>
+                      <TableCell>Local Health Code</TableCell>
+                      <TableCell>Not applicable</TableCell>
+                      <TableCell><Button size="sm" variant="outline" disabled>N/A</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Off-Site Catering License</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="secondary">Planning to add</Badge></TableCell>
+                      <TableCell>Local Health Code</TableCell>
+                      <TableCell>Catering permit application</TableCell>
+                      <TableCell><Button size="sm">Apply for License</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Entertainment License</TableCell>
+                      <TableCell>Annual</TableCell>
+                      <TableCell><Badge variant="default">Current for karaoke</Badge></TableCell>
+                      <TableCell>Local Municipal Code</TableCell>
+                      <TableCell>Entertainment permit</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Permit</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">General Liability Insurance</TableCell>
+                      <TableCell>Annual renewal</TableCell>
+                      <TableCell><Badge variant="default">Current - $2M coverage</Badge></TableCell>
+                      <TableCell>Business requirement</TableCell>
+                      <TableCell>Insurance certificate</TableCell>
+                      <TableCell><Button size="sm" variant="outline">View Certificate</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Workers' Compensation Bond</TableCell>
+                      <TableCell>Annual verification</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>CA Labor Code §3700</TableCell>
+                      <TableCell>Bond certificate</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Verify Bond</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Federal EIN Registration</TableCell>
+                      <TableCell>Maintain active status</TableCell>
+                      <TableCell><Badge variant="default">Active</Badge></TableCell>
+                      <TableCell>IRC Section 6109</TableCell>
+                      <TableCell>EIN confirmation letter</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Verify Status</Button></TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">State Tax Registration Updates</TableCell>
+                      <TableCell>As business changes</TableCell>
+                      <TableCell><Badge variant="default">Current</Badge></TableCell>
+                      <TableCell>CA Rev & Tax Code</TableCell>
+                      <TableCell>Registration certificates</TableCell>
+                      <TableCell><Button size="sm" variant="outline">Check Status</Button></TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
               </CardContent>
             </Card>
           </TabsContent>
