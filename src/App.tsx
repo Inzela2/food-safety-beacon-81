@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Tasks from "./pages/Tasks";
 import Inspections from "./pages/Inspections";
 import NotFound from "./pages/NotFound";
+import Runbook from "./pages/Runbook";
 import { RunbookProvider } from "@/context/RunbookContext";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/runbook" element={<Runbook />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/inspections" element={<Inspections />} />
             <Route path="*" element={<NotFound />} />

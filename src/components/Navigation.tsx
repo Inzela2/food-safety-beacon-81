@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Shield, LayoutDashboard, CheckSquare, ClipboardCheck } from "lucide-react";
+import { Shield, LayoutDashboard, CheckSquare, ClipboardCheck, Play } from "lucide-react";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -11,6 +11,7 @@ const Navigation = () => {
     { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
     { path: '/tasks', label: 'Tasks', icon: CheckSquare },
     { path: '/inspections', label: 'Inspections', icon: ClipboardCheck },
+    { path: '/runbook', label: 'Shift Runbook', icon: Play },
   ];
 
   return (
