@@ -9,6 +9,7 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Tasks from "./pages/Tasks";
 import Inspections from "./pages/Inspections";
+import ShiftRunthrough from "./pages/ShiftRunthrough";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/inspections" element={<Inspections />} />
+          <Route path="/shift-runthrough" element={<ShiftRunthrough />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
