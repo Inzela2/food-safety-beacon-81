@@ -32,6 +32,13 @@ const Index = () => {
             </div>
             <div className="flex space-x-3">
               <Button 
+                onClick={() => navigate('/login')} 
+                variant="ghost" 
+                className="text-gray-600 hover:text-gray-900"
+              >
+                Login
+              </Button>
+              <Button 
                 onClick={handleSkipSignIn} 
                 variant="outline" 
                 className="border-blue-600 text-blue-600 hover:bg-blue-50"
